@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:menzil_yoly/MainMenu.dart';
 
 void main() {
@@ -41,7 +42,18 @@ class _DelayingPageState extends State<DelayingPage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Center(child: Image.asset('lib/assets/images/logo.png')),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image.asset("lib/assets/images/logo_hazir.png"),
+              ),
+              Lottie.asset("lib/assets/images/loading.json")
+            ],
+          ),
+        )
       ),
     );
   }
