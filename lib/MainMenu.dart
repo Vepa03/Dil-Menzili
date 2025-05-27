@@ -183,6 +183,13 @@ class _MainMenuState extends State<MainMenu> {
 
                                 },
                               ),
+                              ListTile(
+                                title: Text("Turk dili"),
+                                leading: Image.asset("lib/assets/images/turkey.png"),
+                                onTap: (){
+
+                                },
+                              ),
                             ],
                           ),
                         ),
