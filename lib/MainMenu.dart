@@ -5,6 +5,7 @@ import 'package:menzil_yoly/pages/Courses.dart';
 import 'package:menzil_yoly/pages/MainPage.dart';
 import 'package:menzil_yoly/pages/Teachers.dart';
 import 'package:menzil_yoly/pages/about_us.dart';
+import 'package:menzil_yoly/theme/gnav_styles.dart';
 import 'package:provider/provider.dart';
 
 class MainMenu extends StatefulWidget {
@@ -16,6 +17,25 @@ class MainMenu extends StatefulWidget {
 
 class _MainMenuState extends State<MainMenu> {
   int current =0;
+  String tema_ady = "Gije";
+  bool tema_ikon = false;
+  bool social_media_image = false;
+
+  tema_ikon_utget(){
+    setState(() {
+      tema_ikon = !tema_ikon;
+    });
+  }
+  tema_ady_uytget(){
+    setState(() {
+      tema_ady = tema_ady == "Gije" ? "Gundiz": "Gije";
+    });
+  }
+  social_media(){
+    setState(() {
+      social_media_image = !social_media_image;
+    });
+  }
   static const List<Widget> _widgetoption = <Widget>[
     Mainpage(),
     Courses(),
@@ -40,8 +60,7 @@ class _MainMenuState extends State<MainMenu> {
         ],
       ),
           child: AppBar(
-            title: Center(child: Text("Dil Menzili", style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold, fontSize: 24),)),
-            backgroundColor: Colors.white,
+            title: Center(child: Text("Dil Menzili", style: TextStyle(fontSize: width*0.07, fontWeight: FontWeight.bold),)),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right: 10.0),
@@ -66,7 +85,7 @@ class _MainMenuState extends State<MainMenu> {
                   
                   ListTile(
                     title: Text("Habarlashmak ucin"),
-                    leading: Icon(Icons.contact_emergency_outlined),
+                    leading: Icon(Icons.mail_outline),
                     onTap: (){
                       showDialog(context: context, 
                       builder: (context)=>AlertDialog(
@@ -77,21 +96,27 @@ class _MainMenuState extends State<MainMenu> {
                             children: [
                               ListTile(
                                 title: Text("Instagram"),
-                                leading: Image.asset("lib/assets/images/instagram_black.png", width: width*0.09,), 
+                                leading: Image(image: AssetImage(
+                                  Theme.of(context).brightness == Brightness.dark ? "lib/assets/images/instagram_white.png" : "lib/assets/images/instagram_black.png"
+                                ), width: width*0.09,),
                                 onTap: (){
                                   
                                 },
                               ),
                               ListTile(
                                 title: Text("TikTok"),
-                                leading: Image.asset("lib/assets/images/tiktok_black.png",width: width*0.09),
+                                leading: Image(image: AssetImage(
+                                  Theme.of(context).brightness == Brightness.dark ? "lib/assets/images/tiktok_white.png" : "lib/assets/images/tiktok_black.png"
+                                ), width: width*0.09,),
                                 onTap: (){
                                   
                                 },
                               ),
                               ListTile(
                                 title: Text("Website"),
-                                leading: Image.asset("lib/assets/images/website_black.png", width: width*0.09),
+                                leading: Image(image: AssetImage(
+                                  Theme.of(context).brightness == Brightness.dark ? "lib/assets/images/website_white.png" : "lib/assets/images/website_black.png"
+                                ), width: width*0.09,),
                                 onTap: (){
                                   
                                 },
@@ -110,10 +135,12 @@ class _MainMenuState extends State<MainMenu> {
                     },
                   ),
                   ListTile(
-                    title: Text("Tema Uytget"),
-                    leading: Icon(Icons.share_outlined),
+                    title: Text(tema_ady),
+                    leading: Icon(tema_ikon ? Icons.wb_sunny_outlined : Icons.dark_mode_outlined),
                     onTap: (){
                       Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                      tema_ady_uytget();
+                      tema_ikon_utget();
                     },
                   ),
                   ListTile(
@@ -162,7 +189,7 @@ class _MainMenuState extends State<MainMenu> {
                       ));
                     },
                   ),
-                  Divider(color: Colors.black,),
+                  Divider(),
                   ListTile(
                     title: Text("Biz Hakynda"),
                     leading: Icon(Icons.info_outline),
@@ -185,7 +212,7 @@ class _MainMenuState extends State<MainMenu> {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.white, 
+          color: Theme.of(context).extension<GNavTheme>()!.backgroundColor,
           boxShadow: [
             BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1)),
           ]
@@ -194,27 +221,27 @@ class _MainMenuState extends State<MainMenu> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: GNav(
-              backgroundColor: Colors.white,
-              rippleColor: Colors.grey[300]!,
-                hoverColor: Colors.grey[100]!,
+              backgroundColor: Theme.of(context).extension<GNavTheme>()!.backgroundColor,
+              rippleColor: Theme.of(context).extension<GNavTheme>()!.rippleColor,
+                hoverColor: Theme.of(context).extension<GNavTheme>()!.hoverColor,
                 gap: 10,
-                activeColor: Colors.black,
+                activeColor: Theme.of(context).extension<GNavTheme>()!.activeColor,
                 iconSize: 24,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 duration: Duration(milliseconds: 400),
-                tabBackgroundColor: Colors.grey[100]!,
-                color: Colors.black,
+                tabBackgroundColor: Theme.of(context).extension<GNavTheme>()!.tabBackgroundColor,
+                color: Theme.of(context).extension<GNavTheme>()!.inactiveColor,
               tabs: [
               GButton(
                 icon: Icons.home,
                 text: "Home",
               ),
               GButton(
-                icon: Icons.subject,
+                icon: Icons.menu_book_outlined,
                 text: "Courses",
               ),
               GButton(
-                icon: Icons.book,
+                icon: Icons.person_outline,
                 text: "Mugallymlar",
               ),
               ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:menzil_yoly/Theme.dart';
+import 'package:menzil_yoly/theme/Theme.dart';
 
 class ThemeProvider with ChangeNotifier{
   ThemeData _themeData = light_mode;
@@ -11,7 +11,7 @@ class ThemeProvider with ChangeNotifier{
 
   void toggleTheme(){
     if (_themeData == light_mode){
-      themeData = night_mode;
+      themeData = dark_mode;
     }else {
       themeData = light_mode;
     }
