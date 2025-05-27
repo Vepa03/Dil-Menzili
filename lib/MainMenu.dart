@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:menzil_yoly/ThemeProvider.dart';
 import 'package:menzil_yoly/pages/Courses.dart';
 import 'package:menzil_yoly/pages/MainPage.dart';
 import 'package:menzil_yoly/pages/Teachers.dart';
 import 'package:menzil_yoly/pages/about_us.dart';
+import 'package:provider/provider.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({super.key});
@@ -14,7 +16,6 @@ class MainMenu extends StatefulWidget {
 
 class _MainMenuState extends State<MainMenu> {
   int current =0;
-  static const TextStyle umumy_style = TextStyle(fontSize: 12, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetoption = <Widget>[
     Mainpage(),
     Courses(),
@@ -106,6 +107,13 @@ class _MainMenuState extends State<MainMenu> {
                     leading: Icon(Icons.share_outlined),
                     onTap: (){
                       
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Tema Uytget"),
+                    leading: Icon(Icons.share_outlined),
+                    onTap: (){
+                      Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
                     },
                   ),
                   ListTile(
@@ -207,7 +215,7 @@ class _MainMenuState extends State<MainMenu> {
               ),
               GButton(
                 icon: Icons.book,
-                text: "Teachers",
+                text: "Mugallymlar",
               ),
               ],
               selectedIndex: current,

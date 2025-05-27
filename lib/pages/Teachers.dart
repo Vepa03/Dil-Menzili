@@ -6,7 +6,7 @@ class Teachers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Mugallymlar")),
+      body: Center(child: Text("Mugallymlar", style: TextStyle(fontSize: 30),)),
     );
   }
 }
