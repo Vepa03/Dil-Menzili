@@ -36,7 +36,8 @@ appBarTheme: AppBarTheme(
 
 // Divider ucin
   dividerTheme: DividerThemeData(
-    color: Colors.black
+    color: Colors.black,
+    thickness: 0.5
   ),
 
 
@@ -100,7 +101,7 @@ ThemeData dark_mode = ThemeData(
 // Divider ucin
   dividerTheme: DividerThemeData(
     color: Colors.white,
-    thickness: 1
+    thickness: 0.5
   ),
 
 
