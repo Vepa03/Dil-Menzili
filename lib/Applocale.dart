@@ -42,6 +42,22 @@ mixin Applocale {
   static const String motive_2 = 'motive 2';
   static const String motive_3 = 'motive 3';
   static const String berilyan_soraglar = 'Berilyan soraglar';
+  static const String girish = "yazylmak kursa";
+  static const String name = 'ady';
+  static const String surname = 'familya';
+  static const String mail = 'mail';
+  static const String phone_number = 'tel_nom';
+  static const String name_allert = 'ady yaz';
+  static const String surname_allert = 'familya yaz';
+  static const String mail_allert = 'mail yaz';
+  static const String phonenumber_allert = 'phone number yaz';
+  static const String snackbar_message = 'snack bar garash';
+  static const String allert_message = 'in yakyn wagtda habarlashars';
+  static const String close= 'Close';
+  static const String info = 'bilgi';
+  static const String phonenumber_allert2 = 'dogry nomer yaz';
+  static const String mail_allert2 = '@gmail bilen dynmaly';
+  
 
 
   
@@ -96,6 +112,25 @@ mixin Applocale {
     motive_2: 'Grow yourself and gain confidence!',
     motive_3: 'Start today for your goal!',
     berilyan_soraglar: 'Most Frequently Asked Questions',
+    girish: 'Registration',
+
+    name: 'Name',
+    surname: 'Surname',
+    mail: 'Email',
+    phone_number: 'Phone Number',
+
+    name_allert: 'Please write your Name',
+    surname_allert: 'Please write your Surname',
+    mail_allert: 'Please write your Email',
+    phonenumber_allert: 'Please write your Phone Number',
+
+    snackbar_message: 'Registration successful! Please wait...',
+    allert_message: 'Our team will contact you as soon as possible.',
+
+    close: 'Close',
+    info: '	Information',
+    phonenumber_allert2:'Please enter a valid number', 
+    mail_allert2: 'Email address must end with @gmail.com',
 
   };
 
@@ -144,7 +179,24 @@ mixin Applocale {
     motive_2: 'Özüňi ösdür, özüňe ynam gazan!',
     motive_3: 'Maksadyň üçin şu günden başla!',
     berilyan_soraglar: 'Iň köp berilýän soraglar',
+    girish: 'Hasaba dur',
+    name: 'Ady',
+    surname: 'Familiýasy',
+    mail: 'E-poçta',
+    phone_number: 'Telefon belgisi',
 
+    name_allert: 'Adyňyzy ýazmagyňyzy haýyş edýäris',
+    surname_allert: 'Familiýaňyzy ýazmagyňyzy haýyş edýäris',
+    mail_allert: 'E-poçta salgyňyzy ýazmagyňyzy haýyş edýäris',
+    phonenumber_allert: 'Telefon belgiňizi ýazmagyňyzy haýyş edýäris',
+
+    snackbar_message: 'Ýazgy üstünlikli! Garaşyň...',
+    allert_message: 'Toparymyz mümkin boldugyça tiz wagtda siziň bilen habarlaşar.',
+
+    close: 'Ýap',
+    info: 'Maglumat',
+    phonenumber_allert2:'Dogry belgi giriziň', 
+    mail_allert2: 'E-poçta salgysy hökman @gmail.com bilen gutarmalydyr',
   };
 
 
@@ -195,6 +247,25 @@ mixin Applocale {
     motive_2: 'Kendini geliştir, özgüven kazan!',
     motive_3: 'Hedefin için bugünden başla!',
     berilyan_soraglar: 'En çok sorulan sorular',
+    girish: 'Kayıt',
+
+    name: 'İsim',
+    surname: 'Soyisim',
+    mail: 'E-posta',
+    phone_number: 'Telefon Numarası',
+
+    name_allert: 'Lütfen isminizi yazın',
+    surname_allert: 'Lütfen soyisminizi yazın',
+    mail_allert: 'Lütfen e-posta adresinizi yazın',
+    phonenumber_allert: 'Lütfen telefon numaranızı yazın',
+
+    snackbar_message: 'Kayıt başarılı! Lütfen bekleyin...',
+    allert_message: 'Ekibimiz en kısa zamanda sizinle iletişime geçecek.',
+
+    close: 'Kapat',
+    info: 'Bilgi',
+    phonenumber_allert2:'Geçerli bir numara girin',
+    mail_allert2: 'E-posta adresi @gmail.com ile bitmelidir',
   };
 
 
@@ -243,6 +314,25 @@ mixin Applocale {
     motive_3: 'Starte heute für dein Ziel!',
 
     berilyan_soraglar: 'Meistgestellte Fragen',
+    girish: 'Registrierung',
+
+    name: 'Name',
+    surname: 'Nachname',
+    mail: 'E-Mail',
+    phone_number: 'Telefonnummer',
+
+    name_allert: 'Bitte geben Sie Ihren Namen ein',
+    surname_allert: 'Bitte geben Sie Ihren Nachnamen ein',
+    mail_allert: 'Bitte geben Sie Ihre E-Mail-Adresse ein',
+    phonenumber_allert: 'Bitte geben Sie Ihre Telefonnummer ein',
+
+    snackbar_message: 'Registrierung erfolgreich! Bitte warten...',
+    allert_message: 'Unser Team wird sich so schnell wie möglich mit Ihnen in Verbindung setzen.',
+
+    close: 'Schließen',
+    info: 'Information',
+    phonenumber_allert2:'Bitte geben Sie eine gültige Nummer ein', 
+    mail_allert2: 'Die E-Mail-Adresse muss mit @gmail.com enden',
 
   };
 
@@ -291,6 +381,25 @@ mixin Applocale {
     motive_2: 'Развивай себя и приобретай уверенность!',
     motive_3: 'Начни уже сегодня ради своей цели!',
     berilyan_soraglar: 'Самые часто задаваемые вопросы',
+    girish: 'Регистрация',
+
+    name: 'Имя',
+    surname: 'Фамилия',
+    mail: 'Электронная почта',
+    phone_number: 'Номер телефона',
+
+    name_allert: 'Пожалуйста, введите ваше имя',
+    surname_allert: 'Пожалуйста, введите вашу фамилию',
+    mail_allert: 'Пожалуйста, введите ваш email',
+    phonenumber_allert: 'Пожалуйста, введите ваш номер телефона',
+
+    snackbar_message: 'Регистрация прошла успешно! Пожалуйста, подождите...',
+    allert_message: 'Наша команда свяжется с вами в ближайшее время.',
+
+    close: 'Закрыть',
+    info: 'Информация',
+    phonenumber_allert2:'Пожалуйста, введите действительный номер', 
+    mail_allert2: 'Адрес электронной почты должен оканчиваться на @gmail.com',
 
   };
 }

@@ -7,6 +7,7 @@ import 'package:menzil_yoly/pages/Courses.dart';
 import 'package:menzil_yoly/pages/MainPage.dart';
 import 'package:menzil_yoly/pages/Teachers.dart';
 import 'package:menzil_yoly/pages/about_us.dart';
+import 'package:menzil_yoly/pages/registration.dart';
 import 'package:menzil_yoly/theme/gnav_styles.dart';
 import 'package:provider/provider.dart';
 import 'package:menzil_yoly/Applocale.dart';
@@ -82,6 +83,13 @@ class _MainMenuState extends State<MainMenu> {
               ),
               Column(
                 children: [
+                  ListTile(
+                    title: Text(Applocale.girish.getString(context)),
+                    leading: Icon(Icons.login_outlined),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Registration()));
+                    },
+                  ),
                   
                   ListTile(
                     title: Text(Applocale.contact.getString(context)),

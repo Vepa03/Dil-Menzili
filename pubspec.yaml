@@ -39,6 +39,8 @@ dependencies:
   provider: ^6.1.5
   localization: ^2.1.1
   flutter_localization: ^0.3.2
+  http: ^1.4.0
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:
