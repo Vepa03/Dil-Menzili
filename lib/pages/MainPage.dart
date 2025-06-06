@@ -9,7 +9,6 @@ class AutoSlider extends StatefulWidget {
 }
 
 class _AutoSliderState extends State<AutoSlider> {
-  final FlutterLocalization _localization = FlutterLocalization.instance;
   final PageController _controller = PageController();
   int _currentPage = 0;
   late Timer _timer;
@@ -217,7 +216,6 @@ class SlideCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Card(

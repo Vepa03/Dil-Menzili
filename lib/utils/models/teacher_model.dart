@@ -4,6 +4,10 @@ class Teacher {
   final String phone;
   final String mail;
   final String descriptionEn;
+  final String descriptionTm;
+  final String descriptionTr;
+  final String descriptionRu;
+  final String descriptionDe;
   final String image;
 
   Teacher({
@@ -11,7 +15,11 @@ class Teacher {
     required this.fullname,
     required this.phone,
     required this.mail,
-    required this.descriptionEn, descriptionTm, descriptionTr, descriptionRu, descriptionDe,
+    required this.descriptionEn,
+    required this.descriptionTm,
+    required this.descriptionTr,
+    required this.descriptionRu,
+    required this.descriptionDe,
     required this.image,
   });
 

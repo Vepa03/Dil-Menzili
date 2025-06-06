@@ -5,6 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:menzil_yoly/ThemeProvider.dart';
 import 'package:menzil_yoly/pages/Courses.dart';
 import 'package:menzil_yoly/pages/MainPage.dart';
+import 'package:menzil_yoly/pages/NewsPage.dart';
 import 'package:menzil_yoly/pages/Teachers.dart';
 import 'package:menzil_yoly/pages/about_us.dart';
 import 'package:menzil_yoly/pages/registration.dart';
@@ -22,6 +23,8 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
 
   final FlutterLocalization _localization = FlutterLocalization.instance;
+
+  String currentLang = 'tr';
   int current =0;
   String get tema_ady => tema_ikon ? Applocale.light.getString(context) : Applocale.night.getString(context);
   bool tema_ikon = false;
@@ -39,7 +42,7 @@ class _MainMenuState extends State<MainMenu> {
   }
   final List<Widget> _widgetoption =[
     AutoSlider(),
-    const Courses(),
+    const CoursesPage(),
     const Teachers(),
   ];
   @override
@@ -88,6 +91,13 @@ class _MainMenuState extends State<MainMenu> {
                     leading: Icon(Icons.login_outlined),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>Registration()));
+                    },
+                  ),
+                  ListTile(
+                    title: Text(Applocale.news.getString(context)),
+                    leading: Icon(Icons.notifications_active),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Newspage()));
                     },
                   ),
                   
@@ -166,7 +176,10 @@ class _MainMenuState extends State<MainMenu> {
                                 title: Text(Applocale.turkmen.getString(context)),
                                 leading: Image.asset("lib/assets/images/tkm_flag.png"),
                                 onTap: (){
-                                  _localization.translate('km');
+                                  setState(() {
+                                    currentLang = 'tm';
+                                  });
+                                  _localization.translate('tm');
                                   Navigator.pop(context);
                                 },
                               ),
@@ -174,6 +187,9 @@ class _MainMenuState extends State<MainMenu> {
                                 title: Text(Applocale.english.getString(context)),
                                 leading: Image.asset("lib/assets/images/britain_flag.png"),
                                 onTap: (){
+                                  setState(() {
+                                    currentLang = 'en';
+                                  });
                                   _localization.translate('en');
                                   Navigator.pop(context);
                                 },
@@ -182,6 +198,9 @@ class _MainMenuState extends State<MainMenu> {
                                 title: Text(Applocale.german.getString(context)),
                                 leading: Image.asset("lib/assets/images/german_flag.png"),
                                 onTap: (){
+                                  setState(() {
+                                    currentLang = 'de';
+                                  });
                                   _localization.translate('de');
                                   Navigator.pop(context);
                                 },
@@ -190,6 +209,9 @@ class _MainMenuState extends State<MainMenu> {
                                 title: Text(Applocale.russian.getString(context)),
                                 leading: Image.asset("lib/assets/images/ruassian_flag.png"),
                                 onTap: (){
+                                  setState(() {
+                                    currentLang = 'ru';
+                                  });
                                   _localization.translate('ru');
                                   Navigator.pop(context);
                                 },
@@ -198,6 +220,9 @@ class _MainMenuState extends State<MainMenu> {
                                 title: Text(Applocale.turkish.getString(context)),
                                 leading: Image.asset("lib/assets/images/turkey.png"),
                                 onTap: (){
+                                  setState(() {
+                                    currentLang = 'tr';
+                                  });
                                   _localization.translate('tr');
                                   Navigator.pop(context);
                                 },

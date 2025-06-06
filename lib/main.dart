@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Font EN',
         ),
         const MapLocale(
-          'km',
+          'tm',
           Applocale.KM,
           countryCode: 'KH',
           fontFamily: 'Font KM',

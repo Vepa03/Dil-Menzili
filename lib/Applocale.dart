@@ -57,7 +57,17 @@ mixin Applocale {
   static const String info = 'bilgi';
   static const String phonenumber_allert2 = 'dogry nomer yaz';
   static const String mail_allert2 = '@gmail bilen dynmaly';
-  
+  static const String experience = 'tejribe';
+  static const String subject = 'sapak';
+  static const String subject_allert = 'allert';
+  static const String age = 'age';
+  static const String age_allert = 'age allert';
+  static const String age_allert_2 = 'age allert 2';
+  static const String trial = 'deneme';
+  static const String price = 'bahasy';
+  static const String duration = 'dowamlylyk';
+  static const String about_course = 'kurs hakynda';
+  static const String news = 'tazelikler';
 
 
   
@@ -113,24 +123,31 @@ mixin Applocale {
     motive_3: 'Start today for your goal!',
     berilyan_soraglar: 'Most Frequently Asked Questions',
     girish: 'Registration',
-
     name: 'Name',
     surname: 'Surname',
     mail: 'Email',
     phone_number: 'Phone Number',
-
     name_allert: 'Please write your Name',
     surname_allert: 'Please write your Surname',
     mail_allert: 'Please write your Email',
     phonenumber_allert: 'Please write your Phone Number',
-
     snackbar_message: 'Registration successful! Please wait...',
     allert_message: 'Our team will contact you as soon as possible.',
-
     close: 'Close',
     info: '	Information',
     phonenumber_allert2:'Please enter a valid number', 
-    mail_allert2: 'Email address must end with @gmail.com',
+    mail_allert2: 'Must end with @gmail.com',
+    experience: 'Work experience',
+    subject: 'Course Name',
+    subject_allert: 'Please enter the course name',
+    age: 'Age',
+    age_allert: 'Please write your age',
+    age_allert_2: 'Please write your age correctly',
+    trial: 'The first trial lesson is free',
+    price: 'Price: ',
+    duration: 'Duration: ',
+    about_course: 'About the course:',
+    news: 'News',
 
   };
 
@@ -184,19 +201,27 @@ mixin Applocale {
     surname: 'Familiýasy',
     mail: 'E-poçta',
     phone_number: 'Telefon belgisi',
-
     name_allert: 'Adyňyzy ýazmagyňyzy haýyş edýäris',
     surname_allert: 'Familiýaňyzy ýazmagyňyzy haýyş edýäris',
     mail_allert: 'E-poçta salgyňyzy ýazmagyňyzy haýyş edýäris',
     phonenumber_allert: 'Telefon belgiňizi ýazmagyňyzy haýyş edýäris',
-
     snackbar_message: 'Ýazgy üstünlikli! Garaşyň...',
     allert_message: 'Toparymyz mümkin boldugyça tiz wagtda siziň bilen habarlaşar.',
-
     close: 'Ýap',
     info: 'Maglumat',
     phonenumber_allert2:'Dogry belgi giriziň', 
-    mail_allert2: 'E-poçta salgysy hökman @gmail.com bilen gutarmalydyr',
+    mail_allert2: '@gmail.com bilen tamamlanmaly',
+    experience: 'Iş tejribesi',
+    subject: 'Sapagyň Ady',
+    subject_allert: 'Kursuň adyny ýazmagyňyzy haýyş edýäris',
+    age: 'Ýaş',
+    age_allert: '	Ýaşyňyzy ýazmagyňyzy haýyş edýäris',
+    age_allert_2: '	Ýaşyňyzy dogry ýazmagyňyzy haýyş edýäris',
+    trial: 'Ilkin synag sapagy mugt',
+    price: 'Bahasy: ',
+    duration: 'Wagty: ',
+    about_course: 'Sapak barada:',
+    news: 'Täzelikler',
   };
 
 
@@ -242,30 +267,36 @@ mixin Applocale {
     jogap_3: 'Evet! İlk dersimiz ücretsiz deneme dersi olarak sunulmaktadır. Memnun kalırsanız devam edebilirsiniz.',
     jogap_4: ' A1’den C1 seviyesine kadar dil eğitimi, ayrıca temel ve orta seviye matematik dersleri sunuyoruz.',
     jogap_5: '',
-
     motive_1: 'Kendinizi keşfedin, dillerle sınırları kaldırın.',
     motive_2: 'Kendini geliştir, özgüven kazan!',
     motive_3: 'Hedefin için bugünden başla!',
     berilyan_soraglar: 'En çok sorulan sorular',
     girish: 'Kayıt',
-
     name: 'İsim',
     surname: 'Soyisim',
     mail: 'E-posta',
     phone_number: 'Telefon Numarası',
-
     name_allert: 'Lütfen isminizi yazın',
     surname_allert: 'Lütfen soyisminizi yazın',
     mail_allert: 'Lütfen e-posta adresinizi yazın',
     phonenumber_allert: 'Lütfen telefon numaranızı yazın',
-
     snackbar_message: 'Kayıt başarılı! Lütfen bekleyin...',
     allert_message: 'Ekibimiz en kısa zamanda sizinle iletişime geçecek.',
-
     close: 'Kapat',
     info: 'Bilgi',
     phonenumber_allert2:'Geçerli bir numara girin',
-    mail_allert2: 'E-posta adresi @gmail.com ile bitmelidir',
+    mail_allert2: '@gmail.com ile bitmeli',
+    experience: '	İş tecrübesi',
+    subject: 'Ders Adı',
+    subject_allert: 'Lütfen dersin adını yazın',
+    age: 'Yaş',
+    age_allert: 'Lütfen yaşınızı yazın',
+    age_allert_2: 'Lütfen yaşınızı doğru yazın',
+    trial: 'lk deneme dersi ücretsiz',
+    price: 'Fiyat: ',
+    duration: 'Süre: ',
+    about_course: 'Ders hakkında:',
+    news: 'Haberler',
   };
 
 
@@ -312,27 +343,33 @@ mixin Applocale {
     motive_1: 'Entdecke dich selbst und überwinde Grenzen mit Sprachen.',
     motive_2: 'Entwickle dich weiter und gewinne Selbstvertrauen!',
     motive_3: 'Starte heute für dein Ziel!',
-
     berilyan_soraglar: 'Meistgestellte Fragen',
     girish: 'Registrierung',
-
     name: 'Name',
     surname: 'Nachname',
     mail: 'E-Mail',
     phone_number: 'Telefonnummer',
-
     name_allert: 'Bitte geben Sie Ihren Namen ein',
     surname_allert: 'Bitte geben Sie Ihren Nachnamen ein',
     mail_allert: 'Bitte geben Sie Ihre E-Mail-Adresse ein',
     phonenumber_allert: 'Bitte geben Sie Ihre Telefonnummer ein',
-
     snackbar_message: 'Registrierung erfolgreich! Bitte warten...',
     allert_message: 'Unser Team wird sich so schnell wie möglich mit Ihnen in Verbindung setzen.',
-
     close: 'Schließen',
     info: 'Information',
     phonenumber_allert2:'Bitte geben Sie eine gültige Nummer ein', 
-    mail_allert2: 'Die E-Mail-Adresse muss mit @gmail.com enden',
+    mail_allert2: 'Muss mit @gmail.com enden',
+    experience: 'Berufserfahrung',
+    subject: 'Name des Kurses',
+    subject_allert: 'Bitte geben Sie den Kurstitel ein',
+    age: 'Alter',
+    age_allert: 'Bitte schreiben Sie Ihr Alter',
+    age_allert_2: 'Bitte schreiben Sie Ihr Alter korrekt',
+    trial: 'Die erste Probestunde ist kostenlos',
+    price: 'Preis: ',
+    duration: 'Dauer: ',
+    about_course: 'Über den Kurs:',
+    news: 'Nachrichten',
 
   };
 
@@ -382,24 +419,31 @@ mixin Applocale {
     motive_3: 'Начни уже сегодня ради своей цели!',
     berilyan_soraglar: 'Самые часто задаваемые вопросы',
     girish: 'Регистрация',
-
     name: 'Имя',
     surname: 'Фамилия',
     mail: 'Электронная почта',
     phone_number: 'Номер телефона',
-
     name_allert: 'Пожалуйста, введите ваше имя',
     surname_allert: 'Пожалуйста, введите вашу фамилию',
     mail_allert: 'Пожалуйста, введите ваш email',
     phonenumber_allert: 'Пожалуйста, введите ваш номер телефона',
-
     snackbar_message: 'Регистрация прошла успешно! Пожалуйста, подождите...',
     allert_message: 'Наша команда свяжется с вами в ближайшее время.',
-
     close: 'Закрыть',
     info: 'Информация',
     phonenumber_allert2:'Пожалуйста, введите действительный номер', 
-    mail_allert2: 'Адрес электронной почты должен оканчиваться на @gmail.com',
+    mail_allert2: 'Должен заканчиваться на @gmail.com',
+    experience: 'Опыт работы',
+    subject: 'Название курса',
+    subject_allert: 'Пожалуйста, введите название курса',
+    age: 'Возраст',
+    age_allert: 'Пожалуйста, напишите ваш возраст',
+    age_allert_2: 'Пожалуйста, напишите ваш возраст правильно',
+    trial: 'Первое пробное занятие бесплатно',
+    price: 'Цена: ',
+    duration: 'Продолжительность: ',
+    about_course: 'О курсе:',
+    news: 'Новости',
 
   };
 }

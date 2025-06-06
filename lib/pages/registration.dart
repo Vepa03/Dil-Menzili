@@ -14,12 +14,13 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
-  final FlutterLocalization _localization = FlutterLocalization.instance;
   final _formKey = GlobalKey<FormState>();
   final name_controller = TextEditingController();
   final surname_controller = TextEditingController();
   final mail_controller = TextEditingController();
   final number_controller =TextEditingController();
+  final subject_controller = TextEditingController();
+  final age_controller =TextEditingController();
 
 
   void _submitForm() {
@@ -59,6 +60,8 @@ class _RegistrationState extends State<Registration> {
         'surname': surname_controller.text,
         'mail': mail_controller.text,
         'phone_number': number_controller.text,
+        'subject': subject_controller.text,
+        'age': age_controller.text,
       })
     );
     if (response.statusCode == 201) {
@@ -94,110 +97,176 @@ class _RegistrationState extends State<Registration> {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              width: width*0.5,
-              child: Lottie.asset("lib/assets/images/registration_anime.json")),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Form(
-                  key: _formKey,
-                  child:Column(
-                    children: [
-                      TextFormField(
-                        controller: name_controller,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          labelText: Applocale.name.getString(context),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          )
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                width: width*0.5,
+                child: Lottie.asset("lib/assets/images/registration_anime.json")),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Form(
+                    key: _formKey,
+                    child:Column(
+                      children: [
+
+                        // ady
+                        TextFormField(
+                          controller: name_controller,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.person),
+                            labelText: Applocale.name.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.name_allert.getString(context);
+                            }
+                            return null;
+                          },
                         ),
-                        validator: (value){
-                          if (value == null || value.isEmpty) {
-                            return Applocale.name_allert.getString(context);
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(height: height*0.015,),
-                      TextFormField(
-                        controller: surname_controller,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person_outline),
-                          labelText: Applocale.surname.getString(context),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          )
+                        SizedBox(height: height*0.015,),
+
+                        // familyasy
+                        TextFormField(
+                          controller: surname_controller,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.person_outline),
+                            labelText: Applocale.surname.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.surname_allert.getString(context);
+                            }
+                            return null;
+                          },
                         ),
-                        validator: (value){
-                          if (value == null || value.isEmpty) {
-                            return Applocale.surname_allert.getString(context);
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(height: height*0.015,),
-                      TextFormField(
-                        controller: mail_controller,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.email_outlined),
-                          labelText: Applocale.mail.getString(context),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          )
+                        SizedBox(height: height*0.015,),
+
+                        // sapagyn ady
+                        TextFormField(
+                          controller: subject_controller,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.school_outlined),
+                            labelText: Applocale.subject.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.subject_allert.getString(context);
+                            }
+                            return null;
+                          },
                         ),
-                        validator: (value){
-                          if (value == null || value.isEmpty) {
-                            return Applocale.mail_allert.getString(context);
-                          }
-                          if (!value.endsWith("@gmail.com")) {
-                            return Applocale.mail_allert2;
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(height: height*0.015,),
-                      TextFormField(
-                        controller: number_controller,
-                        keyboardType: TextInputType.number,
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                        ],
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.phone_outlined),
-                          labelText: Applocale.phone_number.getString(context),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          )
+                        SizedBox(height: height*0.015,),
+
+                        //yasy 
+                        TextFormField(
+                          controller: age_controller,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.calendar_month_outlined),
+                            labelText: Applocale.age.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.age_allert.getString(context);
+                            } 
+                            if (value.length>2) {
+                              return Applocale.age_allert_2.getString(context);
+                            }
+                            return null;
+                          },
                         ),
-                        validator: (value){
-                          if (value == null || value.isEmpty) {
-                            return Applocale.phonenumber_allert.getString(context);
-                          } 
-                          if (value.length<7) {
-                            return Applocale.phonenumber_allert2.getString(context);
-                          }
-                          return null;
-                        },
-                      ),
-                      
-                      SizedBox(height: 20,),
-                      ElevatedButton(onPressed:(){
-                        if(_formKey.currentState!.validate()){
-                          register_student();
-                        }
-                      } , 
-                      child: Text(Applocale.girish.getString(context)))
-                    ],
-                  )),
-              ),
-            )
-          ],
+                        SizedBox(height: height*0.015,),
+
+                        // mail address
+                        TextFormField(
+                          controller: mail_controller,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.email_outlined),
+                            labelText: Applocale.mail.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.mail_allert.getString(context);
+                            }
+                            if (!value.endsWith("@gmail.com")) {
+                              return Applocale.mail_allert2.getString(context);
+                            }
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: height*0.015,),
+
+                        //telefon nomeri
+                        TextFormField(
+                          controller: number_controller,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.phone_outlined),
+                            labelText: Applocale.phone_number.getString(context),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            )
+                          ),
+                          validator: (value){
+                            if (value == null || value.isEmpty) {
+                              return Applocale.phonenumber_allert.getString(context);
+                            } 
+                            if (value.length<7) {
+                              return Applocale.phonenumber_allert2.getString(context);
+                            }
+                            return null;
+                          },
+                        ),
+                        
+                        
+                        SizedBox(height: 20,),
+                        SizedBox(
+                          width: width*0.7,
+                          height: height*0.05,
+                          child: ElevatedButton(onPressed:(){
+                            if(_formKey.currentState!.validate()){
+                              register_student();
+                            }
+                          } , 
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.amber,
+                            foregroundColor: Theme.of(context).textTheme.titleMedium?.color,
+                            
+                          ),
+                          child: Text(Applocale.girish.getString(context), style: TextStyle(fontSize: width*0.05),)),
+                        )
+                      ],
+                    )),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
