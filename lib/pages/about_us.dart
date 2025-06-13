@@ -6,7 +6,10 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("data"),
+      body: Column(children: [
+        Text("About"),
+        Text("Us")
+      ]),
     );
   }
 }
